@@ -1,0 +1,7 @@
+confirm-close-surface = false
+command = nu
+theme = catppuccin-mocha
+font-family = JetBrains Mono Nerd Font
+font-size = 10
+gtk-titlebar = false
+background-opacity = 0.89
