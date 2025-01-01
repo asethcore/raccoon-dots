@@ -930,7 +930,7 @@ alias lt2 = eza -lTg --level=3 --icons
 alias lta = eza -lTag --icons
 alias lta1 = eza -lTag --level=1 --icons
 alias lta2 = eza -lTag --level=2 --icons
-alias lta3 = eza -lTag --level=3--icons
+alias lta3 = eza -lTag --level=3 --icons
 
 def wifi [] {
   nmcli dev wifi list
