@@ -947,7 +947,8 @@ def whosays [] {
 $env.PATH = ($env.PATH | split row (char esep) | prepend '/home/linuxbrew/.linuxbrew/bin')
 
 # fortune | cowsay -r
-pokemon-colorscripts -r
+# pokemon-colorscripts -r
+bunnyfetch
 source ~/.oh-my-posh.nu
 
 $env.PATH = (

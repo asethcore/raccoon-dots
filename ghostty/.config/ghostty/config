@@ -1,7 +1,7 @@
 confirm-close-surface = false
 command = nu
-theme = catppuccin-mocha
-font-family = JetBrains Mono Nerd Font
+theme = GruvboxDark
+font-family = JetBrains Mono
 font-size = 9
 gtk-titlebar = false
-background-opacity = 0.89
+background-opacity = 0.7
