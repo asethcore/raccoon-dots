@@ -2,32 +2,40 @@
   "layer": "top",
   "height": 35,
   "spacing": 5,
-  // "margin-top" :5,
-  // "margin-right" :8,
-  // "margin-left" :8,
+  "margin-top" :5,
+  "margin-right" :8,
+  "margin-left" :8,
 
   "modules-left": [
     "custom/rofi",
     "hyprland/workspaces",
+    "custom/paddc",
     "hyprland/window",
   ],
 
-  "modules-center": ["clock"],
+  "modules-center": ["mpris"],
 
   "modules-right": [
-    "disk",
-    "cpu",
-    "temperature",
-    "backlight",
-    "custom/memory",
+    "tray",
     "pulseaudio",
+    "custom/backlight",
+    "hyprland/language",
+    "custom/paddc",
+    "bluetooth",
+    // "custom/paddc",
     "battery",
+    "custom/paddc",
+    "custom/wifi",
+    "custom/paddc",
+    "clock#date",
+    "custom/paddc",
+    "clock#time",
   ],
 
   "custom/rofi": {
-		"format": "<span >󰮯</span>",
+		"format": "<span color='#fbf1c7' >󰮯</span>",
 		"on-click": "rofi -show drun",
-    "on-click-right": "~/.config/custom_scripts/power-menu.sh",
+    "on-click-right": "~/.config/waybar/scripts/power-menu.sh",
     "escape" : true,
     "tooltip" : false
 	},
@@ -55,9 +63,13 @@
   },
 
   "hyprland/window": {
-    "format": "<span color='#202020' bgcolor='#d3869b' > 󰣆 </span> {class}",
-    "separate-outputs": true,
-    "icon": false,
+    "format": "{class}",
+    "max-length": 20,
+    "rewrite": {
+      "": "<span foreground= '#458588'></span> hyprland",
+      "~": " terminal",
+      "com.mitchellh.ghostty": ">> ghostty"
+    }
   },
 
   "tray": {
@@ -65,45 +77,12 @@
     "spacing": 8
   },
 
-  "disk": {
-    "format": "<span color='#202020' bgcolor='#ea6962' >  </span> {free}",
-    "interval": 20
-  },
-
-  "cpu": {
-    "format": "<span color='#202020' bgcolor='#e78a4e' >  </span> {usage}%",
-    "tooltip": false,
-    "interval": 1
-  },
-
-  "temperature": {
-    "tooltip":false,
-    "thermal-zone": 2,
-    "hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input",
-    "critical-threshold": 70,
-    "format": "<span color='#202020' bgcolor='#d8a657' >  </span> {temperatureC}°C",
-    "format-critical": "<span color='#202020' bgcolor='#cc241d' >  </span> {temperatureC}°C",
-  },
-
-  "backlight": {
-    // "device": "acpi_video1",
-    "format": "<span color='#202020' bgcolor='#f6c657' > 󰞏 </span> {percent}%",
-    "tooltip": false
-  },
-
-  "custom/memory": {
-    "exec": "~/.config/custom_scripts/memory_usage.sh",
-    "interval": 2,
-    "return-type": "json",
-    "format": "<span color='#202020' bgcolor='#458588' >  </span> {}"
-  },
-
   "pulseaudio": {
     // "scroll-step": 1, // %, can be a float
-    "format": "<span color='#202020' bgcolor='#83a598' >  </span> {volume}%",
-    "format-muted": "<span color='#202020' bgcolor='#ea6962' >  </span> {volume}%",
-    "format-bluetooth": "<span color='#202020' bgcolor='#83a598' > 󰂰 </span> {volume}%",
-    "format-bluetooth-muted": "<span color='#202020' bgcolor='#ea6962' > 󰂲 </span> {volume}%",
+    "format": "<span color='#fbf1c7' >  </span>{volume}%",
+    "format-muted": "<span color='#fbf1c7' >  </span>{volume}%",
+    "format-bluetooth": "<span color='#fbf1c7' > 󰂰 </span>{volume}%",
+    "format-bluetooth-muted": "<span color='#fbf1c7' > 󰂲 </span>{volume}%",
     "format-source": "{volume}% ",
     "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
     "tooltip": false,
@@ -121,23 +100,90 @@
       "warning": 30,
       "critical": 20
     },
-    "format-icons": ["󰂎","󰁺","󰁻","󰁽","󰁾","󰁿","󰂀","󰂁","󰂂","󰁹"],
-    "format": "<span color='#202020' bgcolor='#689d6a' > {icon} </span> {capacity}%",
-    "format-critical": "<span color='#202020' bgcolor='#cc241d' > {icon} </span> {capacity}%!!",
-    "format-warning": "<span color='#202020' bgcolor='#e78a4e' > {icon} </span> {capacity}%",
-    "format-full": "<span color='#202020' bgcolor='#689d6a' > {icon} </span> {capacity}%",
-    "format-charging": "<span color='#202020' bgcolor='#689d6a' > 󰂅 </span> {capacity}%",
-    "format-charging-warning": "<span color='#202020' bgcolor='#e78a4e' > 󰢝 </span> {capacity}%",
-    "format-charging-critical": "<span color='#202020' bgcolor='#cc241d' > 󰢜 </span> {capacity}%",
-    "format-plugged": "<span color='#202020' bgcolor='#689d6a' > 󰂅 </span> {capacity}%",
-    "format-alt": "<span color='#202020' bgcolor='#689d6a' > 󱧥 </span> {time}",
+    "format-icons": [" "," "," "," "," "],
+    "format": "<span color='#202020' > {icon}</span>{capacity}%",
+    "format-critical": "<span color='#cc241d' > {icon}</span>{capacity}%!!",
+    "format-warning": "<span color='#d8a657' > {icon}</span>{capacity}%",
+    "format-full": "<span color='#8ec07c' > {icon}</span>{capacity}%",
+    "format-charging": "<span color='#8ec07c' > 󰂅 </span>{capacity}%",
+    "format-charging-warning": "<span color='#d8a657' > 󰢝 </span>{capacity}%",
+    "format-charging-critical": "<span color='#cc241d' > 󰢜 </span>{capacity}%",
+    "format-plugged": "<span color='#8ec07c' > 󰂅 </span>{capacity}%",
+    "format-alt": "<span color='#8ec07c' > 󱧥 </span>{time}",
     "tooltip": false
   },
 
-  "clock": {
-    // "timezone": "America/New_York",
-    "format": "<span color='#202020' bgcolor='#8ec07c' >  </span> {:%a %d %b %H:%M:%S}",
+  "clock#date": {
+    "format": "<span color='#8ec07c' >󰃭 </span>{:%a %d %b}",
     "tooltip": false,
-    "interval":1,
-  }
+  },
+
+  "clock#time": {
+    "format": "<span color='#cc241d' >󱑂 </span>{:%I:%M %p}",
+    "tooltip": false,
+    // "tooltip-format": "Standard Time: {:%I:%M %p}",
+    "min-length": 8,
+    "max-length": 12
+  },
+
+  "custom/backlight": {
+    "exec": "~/.config/waybar/scripts/brightness-control.sh",
+    "return-type": "json",
+    "format": "{}",
+    "tooltip": true,
+    "on-scroll-up": "~/.config/waybar/scripts/brightness-control.sh -o i",
+    "on-scroll-down": "~/.config/waybar/scripts/brightness-control.sh -o d",
+    "interval": 1,
+    "min-length": 6,
+    "max-length": 6
+  },
+
+  "custom/paddc": {
+    "format": " ",
+    "tooltip": false,
+  },
+
+  "hyprland/language": {
+    "format": "{}",
+    "format-en": "US",
+  },
+
+  "mpris": {
+    "format": "<span color='#cc241d'>󰎇 </span> {artist} - {title}",
+    "format-offline": "󰎇 - offline"
+  },
+
+  "custom/wifi": {
+    "exec": "~/.config/waybar/scripts/wifi-status.sh",
+    "return-type": "json",
+    "format": "{}",
+    "tooltip": true,
+    "on-click": "~/.config/waybar/scripts/wifi-menu.sh",
+    "interval": 1,
+    "min-length": 1,
+    "max-length": 12
+  },
+
+  "bluetooth": {
+    "format": "<span color='#458588'>󰂰 </span>",
+    "format-disabled": "<span color='#458588'>󰂲 </span>",
+    "format-connected": "<span color='#458588'>󰂱 </span>",
+    "format-connected-battery": "<span color='#458588'>󰂱 </span>",
+
+    "tooltip-format": 
+      "{num_connections} connected",
+    "tooltip-format-disabled": 
+      "Bluetooth Disabled",
+    "tooltip-format-connected": 
+      "{num_connections} connected\n{device_enumerate}",
+    "tooltip-format-enumerate-connected": 
+      "{device_alias}",
+    "tooltip-format-enumerate-connected-battery": 
+      "{device_alias}: {device_battery_percentage}%",
+
+    "on-click": "~/.config/waybar/scripts/bluetooth-menu.sh",
+    "interval": 1,
+    "min-length": 1,
+    "max-length": 10
+  },
 }
