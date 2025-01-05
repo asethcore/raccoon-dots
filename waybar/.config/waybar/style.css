@@ -248,9 +248,9 @@ window#waybar {
 
 #mpris {
   color: #282828;
-  border: 2px solid #ebdbb2;
+  border: 2px solid #fbf1c7;
   border-radius: 21px;
-  background: #ebdbb2;
+  background: #fbf1c7;
   padding: 5px 5px;
   margin: 1px 1px; 
 }
