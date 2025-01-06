@@ -150,7 +150,7 @@
   },
 
   "mpris": {
-    "format": "<span color='#cc241d'>󰎇  </span>  {artist} - {title}",
+    "format": "<span color='#cc241d'> 󰎇  </span>  {artist} - {title}  ",
   },
 
   "custom/wifi": {
