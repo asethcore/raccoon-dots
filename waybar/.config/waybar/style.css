@@ -254,3 +254,10 @@ window#waybar {
   padding: 5px 5px;
   margin: 1px 1px; 
 }
+
+#custom-notification {
+  color: #fbf1c7;
+  font-size: 14px;
+  background: #3c3835;
+  padding: 2px 2px;
+}

@@ -25,6 +25,8 @@
     // "custom/paddc",
     "battery",
     "custom/paddc",
+    "custom/notification",
+    "custom/paddc",
     "custom/wifi",
     "custom/paddc",
     "clock#date",
@@ -103,7 +105,7 @@
     },
     "format-icons": [" "," "," "," "," "],
     "format": "<span color='#8ec07c' > {icon}</span>{capacity}%",
-    "format-critical": "<span color='#cc241d' > {icon}</span>{capacity}%!!",
+    "format-critical": "<span color='#cc241d' > {icon}</span>{capacity}%",
     "format-warning": "<span color='#d8a657' > {icon}</span>{capacity}%",
     "format-full": "<span color='#8ec07c' > {icon}</span>{capacity}%",
     "format-charging": "<span color='#8ec07c' > 󰂅 </span>{capacity}%",
@@ -151,6 +153,7 @@
 
   "mpris": {
     "format": "<span color='#cc241d'> 󰎇  </span>  {artist} - {title}  ",
+    "max-length": 40,
   },
 
   "custom/wifi": {
@@ -186,4 +189,26 @@
     "min-length": 1,
     "max-length": 10
   },
+
+  "custom/notification": {
+    "tooltip": false,
+    "rotate": 0,
+    "format": "{icon}",
+    "format-icons": {
+      "notification": "󰅸 ",
+      "none": "󰂜 ",
+      "dnd-notification": "󰅸 ",
+      "dnd-none": "󱏨 ",
+      "inhibited-notification": "󰅸 ",
+      "inhibited-none": "󰂜 ",
+      "dnd-inhibited-notification": "󰅸 ",
+      "dnd-inhibited-none": "󱏨 "
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click-right": "swaync-client -d -sw",
+    "on-click": "swaync-client -t -sw",
+    "escape": true
+  }
 }
