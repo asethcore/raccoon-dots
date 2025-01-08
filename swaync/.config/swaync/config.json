@@ -48,21 +48,21 @@
         },
         {
           "active":false,
-          "command":"obs",
-          "label":"󰄀",
+          "command":"hyprctl dispatch exit 0",
+          "label":"",
           "type": "button"
         },
         {
           "active":false,
-          "command":"obs",
-          "label":"󰕧",
+          "command":"hyprlock",
+          "label":"",
           "type": "button"
         },
         {
           "active": false,
           "command": "systemctl poweroff",
           "label": "",
-          "type": "toggle"
+          "type": "button"
         }
       ]
     },
