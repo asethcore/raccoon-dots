@@ -210,5 +210,5 @@
     "on-click-right": "swaync-client -d -sw",
     "on-click": "swaync-client -t -sw",
     "escape": true
-  }
+  },
 }
