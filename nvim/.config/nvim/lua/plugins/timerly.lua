@@ -4,6 +4,6 @@ return {
     "nvzone/volt",
   },
   config = function()
-    vim.keymap.set('n', '<leader>t', ':TimerlyToggle', {})
+    vim.keymap.set('n', '<leader>tt', ':TimerlyToggle<CR>', {})
   end
 }
