@@ -1,7 +1,7 @@
 {
   "layer": "top",
   "position": "bottom",
-  "height": 39,
+  "height": 35,
   "width": 1500,
   "spacing": 5,
   "margin-bottom" :5,
@@ -34,6 +34,7 @@
     "clock#date",
     "custom/paddc",
     "clock#time",
+    "custom/paddc",
   ],
 
   "custom/rofi": {
@@ -73,7 +74,8 @@
       "": "<span foreground= '#458588'></span> hyprland",
       "~": " terminal",
       "com.mitchellh.ghostty": ">> ghostty",
-      "zen-beta": ">> zen"
+      "zen-beta": ">> zen",
+      "org.pwmt.zathura": ">> zathura"
     }
   },
 
@@ -155,7 +157,7 @@
 
   "mpris": {
     "format": "<span color='#cc241d'> 󰎇  </span>  {artist} - {title}  ",
-    "max-length": 40,
+    "max-length": 30,
   },
 
   "custom/wifi": {
