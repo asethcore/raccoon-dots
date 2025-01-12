@@ -19,7 +19,7 @@ window#waybar {
   color: #fff4d2;
   padding: 0px 5px;
   margin: 0;
-  border-radius: 15px;
+  border-radius: 21px;
 }
 
 .modules-left {
@@ -105,36 +105,36 @@ window#waybar {
 #workspaces button:hover {
   background: #3c3835;
   border: 2px solid #b16286;
-  border-radius: 12px;
+  border-radius: 21px;
 }
 
 #workspaces button.visible {
   border: 2px solid #689d6a;
-  border-radius: 12px;
+  border-radius: 21px;
   background: #3c3835;
 }
 
 #workspaces button.visible:hover {
   border: 2px solid #689d6a;
-  border-radius: 12px;
+  border-radius: 21px;
   background: #3c3835;
 }
 
 #workspaces button.active {
   border: 2px solid #689d6a;
-  border-radius: 12px;
+  border-radius: 21px;
   background: #3c3835;
 }
 
 #workspaces button.active:hover {
   border: 2px solid #689d6a;
-  border-radius: 12px;
+  border-radius: 21px;
   background: #3c3835;
 }
 
 #workspaces button.urgent {
   border: 2px solid #cc241d;
-  border-radius: 12px;
+  border-radius: 21px;
   background: #3c3835;
 }
 
