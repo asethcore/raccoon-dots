@@ -1,9 +1,3 @@
-/**
- * ROFI Color theme
- * User: Habib
- * Copyright: JuJu Ashbe !!
-*/
-
 * {
     dark:#0f0f0f;
     red:#ea6962;
@@ -31,9 +25,10 @@
 }
 
 window {
-    width: 35%;
-    location: center;
-    border-radius:0px;
+    width: 400px;
+    location: south;
+    y-offset: -4px;
+    border-radius:6px;
     background-color:@dark;
     children: [listview];
 }
@@ -41,10 +36,11 @@ window {
 listview {
     border:0px;
     padding:1px;
+    scrollbar:false;
     margin:1px;
     columns:4;
     lines:1;
-    cycle:false;
+    cycle:true;
 }
 
 element {
