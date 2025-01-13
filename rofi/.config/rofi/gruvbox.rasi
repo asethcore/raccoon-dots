@@ -1,12 +1,12 @@
 * {
-    background:     #282828;
-    background-alt: #353435;
-    background-dark:#1D2021;
-    foreground:     #EBDBB2;
-    selected:       #458588;
-    active:         #689d68;
-    urgent:         #FB4934;
-    border:         #7C6F64;
+    background:     #1E1E1E;
+    background-alt: #2A2A2A;
+    background-dark:#141617;
+    foreground:     #D6C8A5;
+    selected:       #3E7678;
+    active:         #5E8C5E;
+    urgent:         #E0432F;
+    border:         #6E635A;
     font: "IosevkaTerm Nerd Font 11";
 }
 
@@ -53,7 +53,7 @@ inputbar {
     spacing:                     10px;
     padding:                     60px 40px;
     background-color:            @background-dark;
-    background-image:            url("~/Pictures/walls/w12.png", width);
+    background-image:            url("~/Pictures/walls/w48.png", width);
     text-color:                  @foreground;
     orientation:                 horizontal;
     children:                    [ "textbox-prompt-colon", "entry" ];
@@ -94,7 +94,7 @@ listview {
     scrollbar:                   false;
     layout:                      vertical;
     reverse:                     false;
-    fixed-height:                true;
+    fixed-height:                false;
     fixed-columns:               true;
     
     spacing:                     10px;
