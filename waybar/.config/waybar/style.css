@@ -19,7 +19,7 @@ window#waybar {
   color: #fff4d2;
   padding: 0px 5px;
   margin: 0;
-  border-radius: 21px;
+  border-radius: 15px;
 }
 
 .modules-left {
