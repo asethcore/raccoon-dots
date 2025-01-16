@@ -8,28 +8,37 @@
   "margin-left" :0,
 
   "modules-left": [
-    "custom/paddc",
     "custom/rofi",
-    "custom/hyprpicker",
+    "hyprland/workspaces",
+    "custom/paddc",
     "hyprland/window",
+    "custom/paddc",
+    "tray",
   ],
 
-  "modules-center": ["hyprland/workspaces"],
+  "modules-center": ["mpris"],
 
   "modules-right": [
     "pulseaudio",
+    "custom/backlight",
     "hyprland/language",
-    "battery",
-    "custom/notification",
-    "custom/wifi",
+    "custom/paddc",
     "bluetooth",
+    // "custom/paddc",
+    "battery",
+    "custom/paddc",
+    "custom/notification",
+    "custom/paddc",
+    "custom/wifi",
+    "custom/paddc",
     "clock#date",
+    "custom/paddc",
     "clock#time",
     "custom/paddc",
   ],
 
   "custom/rofi": {
-		"format": "<span color='#cc241d' >󰮯</span> Apps",
+		"format": "<span color='#fbf1c7' >󰮯</span>",
 		"on-click": "rofi -show drun",
     "on-click-right": "sh ~/.config/waybar/scripts/power-menu.sh",
     "escape" : true,
@@ -54,7 +63,7 @@
       "default": "<span color='#cc241d'>󰊠</span>",
     },
     "persistent-workspaces": {
-        "*": 7
+        "*": 5
     }
   },
 
@@ -65,8 +74,7 @@
       "": "<span foreground= '#458588'></span> hyprland",
       "~": " terminal",
       "com.mitchellh.ghostty": ">> ghostty",
-      "zen-beta": ">> zen",
-      "org.pwmt.zathura": ">> zathura"
+      "zen-beta": ">> zen"
     }
   },
 
@@ -113,28 +121,7 @@
 
   "clock#date": {
     "format": "<span color='#8ec07c' >󰃭 </span>{:%a %d %b}",
-    "tooltip": true,
-    "tooltip-format": "<tt><small>{calendar}</small></tt>",
-    "calendar": {
-        "mode"          : "year",
-        "mode-mon-col"  : 3,
-        "weeks-pos"     : "right",
-        "on-scroll"     : 1,
-        "format": {
-        "months":     "<span color='#ffead3'><b>{}</b></span>",
-        "days":       "<span color='#ecc6d9'><b>{}</b></span>",
-        "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
-        "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
-        "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
-        }
-    },
-    "actions":  {
-        "on-click-right": "mode",
-        "on-scroll-up": "tz_up",
-        "on-scroll-down": "tz_down",
-        "on-scroll-up": "shift_up",
-        "on-scroll-down": "shift_down"
-    }
+    "tooltip": false,
   },
 
   "clock#time": {
@@ -184,10 +171,10 @@
   },
 
   "bluetooth": {
-    "format": "<span color='#458588'>󰂰</span>",
-    "format-disabled": "<span color='#458588'>󰂲</span>",
-    "format-connected": "<span color='#458588'>󰂱</span>",
-    "format-connected-battery": "<span color='#458588'>󰂱</span>",
+    "format": "<span color='#458588'>󰂰 </span>",
+    "format-disabled": "<span color='#458588'>󰂲 </span>",
+    "format-connected": "<span color='#458588'>󰂱 </span>",
+    "format-connected-battery": "<span color='#458588'>󰂱 </span>",
 
     "tooltip-format": 
       "{num_connections} connected",
@@ -211,14 +198,14 @@
     "rotate": 0,
     "format": "{icon}",
     "format-icons": {
-      "notification": "󰅸",
-      "none": "󰂜",
-      "dnd-notification": "󰅸",
-      "dnd-none": "󱏨",
-      "inhibited-notification": "󰅸",
-      "inhibited-none": "󰂜",
-      "dnd-inhibited-notification": "󰅸",
-      "dnd-inhibited-none": "󱏨"
+      "notification": "󰅸 ",
+      "none": "󰂜 ",
+      "dnd-notification": "󰅸 ",
+      "dnd-none": "󱏨 ",
+      "inhibited-notification": "󰅸 ",
+      "inhibited-none": "󰂜 ",
+      "dnd-inhibited-notification": "󰅸 ",
+      "dnd-inhibited-none": "󱏨 "
     },
     "return-type": "json",
     "exec-if": "which swaync-client",
@@ -226,10 +213,5 @@
     "on-click-right": "swaync-client -d -sw",
     "on-click": "swaync-client -t -sw",
     "escape": true
-  },
-
-  "custom/hyprpicker": {
-    "format": "",
-    "on-click": "hyprpicker -a",
   }
 }
