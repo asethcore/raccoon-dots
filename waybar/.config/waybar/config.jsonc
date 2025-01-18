@@ -23,6 +23,7 @@
     "custom/backlight",
     "hyprland/language",
     "custom/paddc",
+    "custom/paddc",
     "bluetooth",
     // "custom/paddc",
     "battery",
@@ -196,17 +197,7 @@
   "custom/notification": {
     "tooltip": false,
     "rotate": 0,
-    "format": "{icon}",
-    "format-icons": {
-      "notification": "󰅸 ",
-      "none": "󰂜 ",
-      "dnd-notification": "󰅸 ",
-      "dnd-none": "󱏨 ",
-      "inhibited-notification": "󰅸 ",
-      "inhibited-none": "󰂜 ",
-      "dnd-inhibited-notification": "󰅸 ",
-      "dnd-inhibited-none": "󱏨 "
-    },
+    "format": " ",
     "return-type": "json",
     "exec-if": "which swaync-client",
     "exec": "swaync-client -swb",
