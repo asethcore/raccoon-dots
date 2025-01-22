@@ -918,7 +918,7 @@ alias exe = ./program
 alias map = npx mapscii
 alias n = nvim
 alias titty = tty-clock -c
-alias neofetch = neofetch --ascii ~/Pictures/MIST1024/FILE_ID.DIZ
+# alias neofetch = neofetch --ascii ~/Pictures/MIST1024/FILE_ID.DIZ
 alias l = eza -al --icons
 alias lt = eza --icons
 alias ll = eza -lg --icons
@@ -948,7 +948,7 @@ $env.PATH = ($env.PATH | split row (char esep) | prepend '/home/linuxbrew/.linux
 
 # fortune | cowsay -r
 # pokemon-colorscripts -r
-bunnyfetch
+fm6000
 source ~/.oh-my-posh.nu
 
 $env.PATH = (
