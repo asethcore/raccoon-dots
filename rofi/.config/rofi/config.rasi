@@ -2,7 +2,7 @@
 configuration {
 	modi:                       "drun";
   show-icons:                 true;
-  icon-theme: "Mkos-Big-Sur-Night";
+  icon-theme: "Mkos-Big-Sur";
 	drun-display-format:        "{name}";
 }
 
