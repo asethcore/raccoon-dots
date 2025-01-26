@@ -1,11 +1,11 @@
 {
   "layer": "top",
-  "position": "top",
+  "position": "bottom",
   "height": 35,
   "spacing": 5,
-  "margin-top" :5,
-  "margin-right" :5,
-  "margin-left" :5,
+  "margin-top" :0,
+  "margin-right" :0,
+  "margin-left" :0,
 
   "modules-left": [
     "custom/rofi",
@@ -16,7 +16,7 @@
     "tray",
   ],
 
-  "modules-center": ["mpris"],
+  "modules-center": ["custom/player"],
 
   "modules-right": [
     "pulseaudio",
@@ -154,11 +154,6 @@
     "format-en": "US",
   },
 
-  "mpris": {
-    "format": "<span color='#cc241d'>󰎇  </span>  {artist}  {title}",
-    "max-length": 30,
-  },
-
   "custom/wifi": {
     "exec": "~/.config/waybar/scripts/wifi-status.sh",
     "return-type": "json",
@@ -213,5 +208,11 @@
     "on-click-right": "swaync-client -d -sw",
     "on-click": "swaync-client -t -sw",
     "escape": true
+  },
+
+  "custom/player": {
+    "exec": "~/.config/waybar/scripts/player.sh",
+    "format": "{}",
+    "interval": 1,
   }
 }
