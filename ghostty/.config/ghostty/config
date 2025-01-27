@@ -1,6 +1,6 @@
 confirm-close-surface = false
 command = nu
-theme = GruvboxDark
+theme = GruvboxLight
 font-family = JetBrains Mono Italic
 font-size = 9
 gtk-titlebar = false

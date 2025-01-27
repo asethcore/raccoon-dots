@@ -948,7 +948,7 @@ $env.PATH = ($env.PATH | split row (char esep) | prepend '/home/linuxbrew/.linux
 
 # fortune | cowsay -r
 # pokemon-colorscripts -r
-fm6000
+neofetch
 source ~/.oh-my-posh.nu
 
 $env.PATH = (

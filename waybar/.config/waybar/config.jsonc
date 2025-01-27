@@ -1,11 +1,11 @@
 {
   "layer": "top",
-  "position": "bottom",
+  "position": "top",
   "height": 35,
   "spacing": 5,
-  "margin-top" :0,
-  "margin-right" :0,
-  "margin-left" :0,
+  "margin-top" :3,
+  "margin-right" :3,
+  "margin-left" :3,
 
   "modules-left": [
     "custom/rofi",
@@ -214,5 +214,6 @@
     "exec": "~/.config/waybar/scripts/player.sh",
     "format": "{}",
     "interval": 1,
+    "max-length": 35,
   }
 }
