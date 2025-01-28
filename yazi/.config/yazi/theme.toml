@@ -2,22 +2,22 @@
 cwd = { fg = "white"}
 preview_hovered = { fg = "black", bg = "blue" }
 hovered = { fg = "black", bg = "blue"}
-border_style = { fg = "#32302f"}
+border_style = { fg = "#fbf1c7"}
 
 [mode]
 normal_main = { fg = "white", bg = "#458588", bold = true }
-normal_alt  = { fg = "#458588", bg = "#32302f"}
+normal_alt  = { fg = "#458588", bg = "#fbf1c7"}
 
 select_main = { fg = "white", bg = "#458588", bold = true }
-select_alt  = { fg = "#282828", bg = "#32302f"}
+select_alt  = { fg = "#EBDBB2", bg = "#fbf1c7"}
 
 unset_main = { fg = "white", bg = "#458588", bold = true }
-unset_alt  = { fg = "#458588", bg = "#32302f"}
+unset_alt  = { fg = "#458588", bg = "#fbf1c7"}
 
 [status]
 separator_open  = ""
 separator_close = ""
-separator_style = { fg = "black", bg = "#32302f" }
+separator_style = { fg = "black", bg = "#fbf1c7" }
 
 # Progress
 progress_label  = { fg = "white", bold = true }
