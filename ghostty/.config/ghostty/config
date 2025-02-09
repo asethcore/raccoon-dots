@@ -1,10 +1,10 @@
 confirm-close-surface = false
-command = nu
-theme = GruvboxLight
+command = fish
+theme = ayu_light
 font-family = JetBrains Mono Italic
 font-size = 9
 gtk-titlebar = false
 background-opacity = 1
-window-padding-x = 11
-window-padding-y = 11
+window-padding-x = 20
+window-padding-y = 20
 window-padding-balance = true
