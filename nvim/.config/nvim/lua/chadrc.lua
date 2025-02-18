@@ -1,12 +1,10 @@
 local M = {}
 
 M.base46 = {
-  theme = 'ayu_light'
+  theme = 'material-lighter'
 }
 
 M.ui = {
-  statusline ={ theme = 'vscode' },
-
   cmp = {
     style = "atom",
   }

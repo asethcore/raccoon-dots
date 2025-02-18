@@ -1,10 +1,10 @@
 confirm-close-surface = false
 command = fish
-theme = ayu_light
-font-family = JetBrains Mono Italic
+theme = Material
+font-family = terminus regular
 font-size = 9
 gtk-titlebar = false
 background-opacity = 1
-window-padding-x = 20
-window-padding-y = 20
+window-padding-x = 0
+window-padding-y = 0
 window-padding-balance = true
