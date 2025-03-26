@@ -1,10 +1,10 @@
 confirm-close-surface = false
-command = fish
-theme = Material
-font-family = terminus regular
-font-size = 9
-gtk-titlebar = false
+command=fish
+theme = GruvboxDark
+font-family = "JetBrainsMono Nerd Font Mono"
+font-size = 10
+gtk-titlebar = true
 background-opacity = 1
-window-padding-x = 0
-window-padding-y = 0
+window-padding-x = 5
+window-padding-y = 5
 window-padding-balance = true

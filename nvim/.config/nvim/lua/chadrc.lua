@@ -1,7 +1,7 @@
 local M = {}
 
 M.base46 = {
-  theme = 'material-lighter'
+  theme = 'gruvbox'
 }
 
 M.ui = {
